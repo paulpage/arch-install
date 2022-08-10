@@ -6,8 +6,7 @@
 
 ### OPTIONS AND VARIABLES ###
 
-dotfilesrepo="https://github.com/lukesmithxyz/voidrice.git"
-progsfile="https://raw.githubusercontent.com/LukeSmithxyz/LARBS/master/progs.csv"
+progsfile="./progs.csv"
 aurhelper="yay"
 repobranch="master"
 
@@ -242,11 +241,6 @@ manualinstall yay || error "Failed to install AUR helper."
 # the user has been created and has priviledges to run sudo without a password
 # and all build dependencies are installed.
 installationloop
-
-# Install the dotfiles in the user's home directory
-cd "/home/$name"
-git clone "$dotfilesrepo"
-cd -
 
 # Most important command! Get rid of the beep!
 rmmod pcspkr
